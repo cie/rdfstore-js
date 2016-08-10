@@ -1147,7 +1147,7 @@ ArgList "[62] ArgList"
     args.value = [];
     return args;
 }
-/ '(' WS* d:('DISTINCT'/'distinct')? WS* e:Expression WS* es:( ',' Expression)* ')' {
+/ '(' WS* d:('DISTINCT'/'distinct')? WS* e:Expression WS* es:( ',' WS* Expression)* ')' {
     var cleanEx = [];
 
     for(var i=0; i<es.length; i++) {
